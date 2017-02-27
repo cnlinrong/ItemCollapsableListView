@@ -93,16 +93,6 @@ public class ItemCollapsableAdapter extends BaseAdapter {
                 this.collapsable_box.setVisibility(View.VISIBLE);
                 this.flag_collapsed = false;
                 lastExpandedViewHelper = this;
-
-                minHeight = content_box.getMeasuredHeight();
-
-                collapsable_box.measure(0, 0);
-                int collapsableBoxHeight = collapsable_box.getMeasuredHeight();
-
-                divider_line.measure(0, 0);
-                int dividerLineHeight = divider_line.getMeasuredHeight();
-
-                maxHeight = minHeight + collapsableBoxHeight + dividerLineHeight;
             }
 
             content_box.setOnClickListener(new View.OnClickListener() {
